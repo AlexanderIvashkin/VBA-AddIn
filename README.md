@@ -160,3 +160,8 @@ ClearAndResizeTable: clear and resize a named table on the active sheet then mov
 AI_SendRangeAsHTML: Send a range as an HTML mail
 AI_GetLastShitName: Get a name of the last sheet in the active workbook.
 ```
+
+### Importing VBA code into files (useful for version control with Git, for example) - ImportExport.bas
+
+    ExportModules: Call this sub to export all the modules
+    
