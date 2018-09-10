@@ -1,5 +1,5 @@
 # VBA-AddIn
-## VBA Addin with useful macros: regexps, networking-related (IP address/subnet mangling), VBA macro exporting &amp;c.
+## VBA Addin with useful macros: regexps, networking-related (IP address/subnet mangling), bitwise operations, VBA macro exporting &amp;c.
 
 ### Network-related functions (networking.bas)
 
@@ -152,6 +152,13 @@ AI_RegExp_GetSubMatch: Get a submatch from a regexp
 
 ### Bitwise logical operations (bitwise.bas)
 
+```
+AI_BitwiseAND
+AI_BitwiseOR
+AI_BitwiseNOT
+AI_BitwiseXOR
+```
+
 ### Miscellaneous functions (misc.bas)
 
 ```
@@ -164,4 +171,3 @@ AI_GetLastShitName: Get a name of the last sheet in the active workbook.
 ### Importing VBA code into files (useful for version control with Git, for example) - ImportExport.bas
 
     ExportModules: Call this sub to export all the modules
-    
