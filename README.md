@@ -3,7 +3,7 @@
 
 ### Network-related functions
 
-**Function AI_Is_IP_Address(ByVal StringToSearch As String, Optional CIDRMask As Boolean = False) As Boolean**
+**AI_Is_IP_Address**
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Check that the string contains a valid IPv4 address (and, optionally, a CIDR mask).
@@ -20,7 +20,7 @@
     '' Alexander Ivashkin, 25 January 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-**Function AI_Get_IP_Address(ByVal StringToSearch As String) As String**
+**AI_Get_IP_Address**
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Extricate an IP address from a string.
@@ -42,7 +42,7 @@
     '' Alexander Ivashkin, 22 January 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-**Function AI_Get_CIDR_PfxLen(ByVal StringToSearch As String) As String**
+**AI_Get_CIDR_PfxLen**
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Extricate a CIDR prefix length from a string containing an IPv4 address and a mask.
@@ -65,7 +65,7 @@
     '' Alexander Ivashkin, 22 January 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-**Function AI_IP_CIDR_To_Mask(ByVal TextualCIDR As String) As String**
+**AI_IP_CIDR_To_Mask**
     
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Convert a textual CIDR into a subnet mask
@@ -77,7 +77,7 @@
     '' Updated version (to support mask without a slash): 16 January 2018
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-**Function AI_IP_NOT_Subnet(ByVal TextualSubnetMask As String) As String**
+**AI_IP_NOT_Subnet**
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' NOT's a subnet mask (flips 0 and 1s, useful for ACL matching)
@@ -86,8 +86,7 @@
     '' Alexander Ivashkin, 16 November 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-**Function AI_IP_IsSubnet1InSubnet2(ByVal TextualSubnet1 As String, ByVal TextualSubnetMask1 As String, _
-        ByVal IsSubnetMask1Wildcard As Boolean, ByVal TextualSubnet2 As String, ByVal TextualSubnetMask2 As String, ByVal IsSubnetMask2Wildcard As Boolean) As Boolean**
+**AI_IP_IsSubnet1InSubnet2**
         
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Checks whether a subnet/mask will be within another subnet/mask
@@ -96,7 +95,7 @@
     '' Alexander Ivashkin, 14-17 November 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         
-**Function AI_IP_IsAddressInSubnet(ByVal TextualIP_Address As String, ByVal TextualSubnet_Number As String, ByVal TextualSubnetMask As String, ByVal IsSubnetMaskWildcard As Boolean) As Boolean**
+**AI_IP_IsAddressInSubnet**
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Checks whether an IP address will be within a subnet with a given mask
@@ -105,10 +104,20 @@
     '' Alexander Ivashkin, 14 November 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-**Function AI_IP_CalculateSubnet(ByVal TextualIP_Address As String, ByVal TextualSubnetMask As String) As String**
+**AI_IP_CalculateSubnet**
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Find a subnet out of textual IP address and subnet mask
     '' Returns a textual representation of subnet number
     '' Alexander Ivashkin, 14 November 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+### Strings and regexps
+
+```
+AI_ParseMagicSymbols: Replace magic symbols (placeholders) with dynamic data
+AI_MATCH_Regexp: Regexp version of MATCH (match a regexp against a range of strings)
+AI_MATCH_Regexps:Regexp version of MATCH - another version: match a string against an array of regexps
+AI_RegExp_IsMatch: Check if a regexp matches
+AI_RegExp_GetSubMatch: Get a submatch from a regexp
+```
