@@ -20,7 +20,8 @@
     '' Alexander Ivashkin, 25 January 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-    Function AI_Get_IP_Address(ByVal StringToSearch As String) As String
+**Function AI_Get_IP_Address(ByVal StringToSearch As String) As String**
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '' Extricate an IP address from a string.
     '' Arguments: textual representation of a valid IPv4 address, with or without junk
