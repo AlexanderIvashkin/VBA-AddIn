@@ -112,7 +112,7 @@
     '' Alexander Ivashkin, 14 November 2017
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-### Strings and regexps
+### Strings and regexps (g-strings.bas)
 
 ```
 AI_MATCH_Regexp: Regexp version of MATCH (match a regexp against a range of strings)
@@ -148,4 +148,15 @@ AI_RegExp_GetSubMatch: Get a submatch from a regexp
 ''
 '' Alexander Ivashkin, 26 January 2018
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+```
+
+### Bitwise logical operations (bitwise.bas)
+
+### Miscellaneous functions (misc.bas)
+
+```
+ICanHazSheet: check if a sheet exists (by name)
+ClearAndResizeTable: clear and resize a named table on the active sheet then move the selection to the first cell of the table
+AI_SendRangeAsHTML: Send a range as an HTML mail
+AI_GetLastShitName: Get a name of the last sheet in the active workbook.
 ```
