@@ -115,9 +115,37 @@
 ### Strings and regexps
 
 ```
-AI_ParseMagicSymbols: Replace magic symbols (placeholders) with dynamic data
 AI_MATCH_Regexp: Regexp version of MATCH (match a regexp against a range of strings)
 AI_MATCH_Regexps:Regexp version of MATCH - another version: match a string against an array of regexps
 AI_RegExp_IsMatch: Check if a regexp matches
 AI_RegExp_GetSubMatch: Get a submatch from a regexp
+```
+
+**AI_ParseMagicSymbols: Replace magic symbols (placeholders) with dynamic data**
+
+```
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''
+'' Arguments: a string full of magic.
+''
+'' Placeholders consist of one symbol prepended with a %:
+''    %d - current date
+''    %t - current time
+''    %u - username (user ID)
+''    %n - full user name (usually name and surname)
+''    %% - literal % (placeholder escape)
+''    Using an unsupported magic symbol will treat the % literally, as if it had been escaped.
+''    A single placeholder terminating the string will also be treated literally.
+''    Magic symbols are case-sensitive.
+''
+'' Returns:   A string with no magic but with lots of beauty.
+''
+'' Examples:
+'' "Today is %d" becomes "Today is 2018-01-26"
+'' "Beautiful time: %%%t%%" yields "Beautiful time: %16:10:51%"
+'' "There are %zero% magic symbols %here%.", true to its message, outputs "There are %zero% magic symbols %here%."
+'' "%%% looks lovely %%%" would show "%% looks lovely %%" - one % for the escaped "%%" and the second one for the unused "%"!
+''
+'' Alexander Ivashkin, 26 January 2018
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ```
