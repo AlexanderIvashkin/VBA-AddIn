@@ -8,8 +8,6 @@
 ' If IsDebug is turned on, we're working on this XLAM and using our own subroutines to save our own source code.
 ' Turning IsDebug on would save the source files in the same folder as the AddIn
 Const IsDebug = True
-'Const cPathToTheAddIns = "C:\Users\ai28843\AppData\Roaming\Microsoft\AddIns"
-'Const cPathToTheAddIns = "/C/Users/ai28843/AppData/Roaming/Microsoft/AddIns"
 'Const cSourceWorkbook = "AI.xlam"
 
 Option Explicit
